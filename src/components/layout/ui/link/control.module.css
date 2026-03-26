@@ -1,0 +1,115 @@
+/* control.module.css */
+
+/* ========== Base ========== */
+.control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Basics */
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  font: inherit;
+  line-height: 1;
+
+  /* Smooth */
+  transition: all var(--transition-fast);
+
+  /* Default reset-ish */
+  margin: 0;
+  border: 2px solid transparent;
+  background: transparent;
+  color: inherit;
+}
+
+/* Fokus: einheitlich, nicht nur beim BackToTop */
+.control:focus-visible {
+  outline: 2px solid rgb(var(--peach-300));
+  outline-offset: 3px;
+}
+
+/* Disabled: global, gilt für submit + swiper + alles */
+.control:disabled,
+.control[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ========== Variant: Primary ========== */
+.primary {
+  border-radius: var(--btn-radius);
+  padding: var(--btn-padding);
+
+  font-size: 1rem;
+  font-weight: var(--btn-font-weight);
+
+  box-shadow: var(--shadow-md);
+
+  background: rgba(var(--beige), 0.15);
+  border-color: rgb(var(--peach));
+  color: rgb(var(--beige));
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
+}
+
+.primary:hover {
+  background: rgb(var(--peach));
+  color: rgb(var(--white));
+  border-color: rgb(var(--beige));
+  box-shadow: var(--shadow-inset-sm);
+}
+
+.primary:disabled {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* ========== Variant: Secondary (Platzhalter) ========== */
+.secondary {
+  /* später */
+}
+
+/* ========== Variant: Icon Primare ========== */
+.iconPrimary {
+  color: rgb(var(--btn-icon-primary-color));
+  border-color: rgb(var(--btn-icon-primary-border-color));
+  padding: var(--btn-icon-primary-padding);
+  background-color: rgb(var(--btn-icon-primary-background-color));
+}
+
+.iconPrimary:hover {
+  color: var(--btn-icon-primary-color-hover);
+  border-color: rgb(var(--btn-icon-primary-border-color-hover));
+  background-color: rgb(var(--btn-icon-primary-background-color-hover));
+  box-shadow: var(--btn-icon-primary-box-shadow-hover);
+}
+
+/* ========== Variant: Icon Secondary ========== */
+.iconSecondary {
+  color: rgb(var(--btn-icon-secondary-color));
+  border-color: rgb(var(--btn-icon-secondary-border-color));
+  padding: var(--btn-icon-secondary-padding);
+  background-color: rgb(var(--btn-icon-secondary-background-color));
+}
+
+.iconSecondary:hover {
+  color: rgb(var(--btn-icon-secondary-color-hover));
+  border-color: rgb(var(--btn-icon-secondary-border-color-hover));
+  background-color: rgb(var(--btn-icon-secondary-background-color-hover));
+  box-shadow: var(--btn-icon-secondary-box-shadow-hover);
+}
+
+/* ========== Mod: Icon Button (Klickfläche + Kreis) ========== */
+.iconButton {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+}
+
+/* Icon inside */
+.icon {
+  display: inline-flex;
+  font-size: 2rem;
+  cursor: pointer;
+}

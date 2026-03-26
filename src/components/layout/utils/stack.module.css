@@ -1,0 +1,144 @@
+.stack {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap-sm {
+  gap: var(--gap-sm);
+}
+
+.gap-md {
+  gap: var(--gap-md);
+}
+
+.gap-lg {
+  gap: var(--gap-lg);
+}
+
+.gap-xl {
+  gap: var(--gap-xl);
+}
+
+.gap-xxl {
+  gap: var(--gap-xxl);
+}
+.gap-xxl {
+  gap: var(--gap-xxxl);
+}
+
+/* bis 1024px */
+@media (max-width: 1024px) {
+  .gap-lg-sm {
+    gap: var(--gap-sm);
+  }
+  .gap-lg-md {
+    gap: var(--gap-md);
+  }
+  .gap-lg-lg {
+    gap: var(--gap-lg);
+  }
+  .gap-lg-xl {
+    gap: var(--gap-xl);
+  }
+  .gap-lg-xxl {
+    gap: var(--gap-xxl);
+  }
+  .gap-lg-xxxl {
+    gap: var(--gap-xxxl);
+  }
+}
+
+/* bis 768px */
+@media (max-width: 768px) {
+  .gap-md-sm {
+    gap: var(--gap-sm);
+  }
+  .gap-md-md {
+    gap: var(--gap-md);
+  }
+  .gap-md-lg {
+    gap: var(--gap-lg);
+  }
+  .gap-md-xl {
+    gap: var(--gap-xl);
+  }
+  .gap-md-xxl {
+    gap: var(--gap-xxl);
+  }
+  .gap-md-xxxl {
+    gap: var(--gap-xxxl);
+  }
+}
+
+/* bis 480px */
+@media (max-width: 480px) {
+  .gap-sm-sm {
+    gap: var(--gap-sm);
+  }
+  .gap-sm-md {
+    gap: var(--gap-md);
+  }
+  .gap-sm-lg {
+    gap: var(--gap-lg);
+  }
+  .gap-sm-xl {
+    gap: var(--gap-xl);
+  }
+  .gap-sm-xxl {
+    gap: var(--gap-xxl);
+  }
+  .gap-sm-xxxl {
+    gap: var(--gap-xxxl);
+  }
+}
+
+/* bis 480px */
+@media (max-width: 375px) {
+  .gap-xs-sm {
+    gap: var(--gap-sm);
+  }
+  .gap-xs-md {
+    gap: var(--gap-md);
+  }
+  .gap-xs-lg {
+    gap: var(--gap-lg);
+  }
+  .gap-xs-xl {
+    gap: var(--gap-xl);
+  }
+  .gap-xs-xxl {
+    gap: var(--gap-xxl);
+  }
+  .gap-xs-xxxl {
+    gap: var(--gap-xxxl);
+  }
+}
+
+.justify-flex-start {
+  justify-content: flex-start;
+}
+.justify-flex-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-space-around {
+  justify-content: space-around;
+}
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
