@@ -1,4 +1,4 @@
-import styles from "./backgroundGradientWrapper.module.css";
+import styles from "./backgroundGradient.module.css";
 import React from "react";
 
 type Percentage = `${number}%`;
