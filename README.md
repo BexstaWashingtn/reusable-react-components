@@ -1,16 +1,32 @@
 # Reusable React Components
 
-Sammlung wiederverwendbarer React-Komponenten und Hooks mit Fokus auf Struktur, Wartbarkeit und Barrierefreiheit.
+Sammlung modularer, wiederverwendbarer React-Komponenten und Hooks mit Fokus auf Struktur, Wartbarkeit und Barrierefreiheit.
+
+Dieses Repository dient als Grundlage für skalierbare Frontend-Projekte sowie als Referenz für moderne React-Architektur mit TypeScript.
+
+---
 
 ## Überblick
 
-Dieses Repository enthält:
+Dieses Projekt enthält:
 
-- UI- & Layout - Komponenten
-- Utility-Komponenten für Accessibility
-- Custom Hooks zur Wiederverwendung von Logik
+- UI- und Layout-Komponenten
+- Accessibility-Komponenten und -Utilities
+- Wiederverwendbare Custom Hooks
+- Utility-Funktionen
 
-Ziel ist eine saubere Trennung von Darstellung, Logik und Struktur sowie eine konsistente Nutzung über mehrere Projekte hinweg.
+Ziel ist eine klare Trennung von Darstellung, Logik und Struktur, um Komponenten effizient über mehrere Projekte hinweg nutzen zu können.
+
+---
+
+## Features
+
+- Modulare Komponentenstruktur (UI / Layout / Accessibility)
+- Wiederverwendbare und isolierte Custom Hooks
+- Fokus auf Accessibility (Skip Links, Fokus-Management, Screenreader-Support)
+- TypeScript für Typsicherheit
+- CSS Modules für gekapselte Styles
+- Saubere und skalierbare Projektarchitektur
 
 ---
 
@@ -29,56 +45,34 @@ Ziel ist eine saubere Trennung von Darstellung, Logik und Struktur sowie eine ko
 src/
   components/
     accessibility/
-      a11y.module.css
-      a11y.tsx
-      SkipToContent.tsx
-      SrOnly.tsx
-      useFocusOnMount.ts
     layout/
-      background/
-        backgrondGradient.tsx
-        backgrondGradient.module.css
-        backgroundImage.tsx
-        backgroundImage.module.css
-      container/
-        Container.tsx
-        container.module.css
-      stack/
-        Stack.tsx
-        stack.module.css
     ui/
-      Link/
-        link.module.css
-        Link.tsx
   hooks/
-    useCount.ts
-    useDebounceValue.ts
-    useDocumentTitle.ts
-    useToggle.ts
-  styles/
-    globals/
-      tokens.css
-    normalize.css
-    styles.css
-  types/
   utils/
-    slugify.ts
+  styles/
+  types/
 ```
 
 ### Beschreibung
 
 - **components/**
-  Wiederverwendbare UI- & Layout-Komponenten
+  Wiederverwendbare UI- und Layout-Komponenten
 
-- **accessibility/**
+- **components/accessibility/**
   Komponenten und Hooks zur Verbesserung der Barrierefreiheit
   (z. B. Skip Links, Screenreader-Helfer, Fokus-Management)
 
 - **hooks/**
-  Allgemeine Custom Hooks (nicht zwingend a11y-bezogen)
+  Allgemeine Custom Hooks zur Wiederverwendung von Logik
+
+- **utils/**
+  Reine Hilfsfunktionen (z. B. String-Manipulation, Formatter)
 
 - **styles/**
   Design Tokens und globale Styles
+
+- **types/**
+  Zentrale TypeScript-Typdefinitionen
 
 ---
 
@@ -101,18 +95,26 @@ npm run dev
 Komponenten und Hooks können direkt importiert werden:
 
 ```tsx
-import { SkipToContent } from "@/accessibility/a11y";
-import { useFocusOnMount } from "@/accessibility/useFocusOnMount";
+import { SkipToContent } from "@/components/accessibility/SkipToContent";
+import { useFocusOnMount } from "@/components/accessibility/useFocusOnMount";
+```
+
+Optional (bei Nutzung von Barrel Exports):
+
+```tsx
+import { SkipToContent, useFocusOnMount } from "@/components/accessibility";
 ```
 
 ---
 
-## Beispiel: useFocusOnMount
+## Beispiele
+
+### useFocusOnMount
 
 Hook zum automatischen Setzen des Fokus beim Mount eines Elements.
 
 ```tsx
-import { useFocusOnMount } from "@/accessibility/useFocusOnMount";
+import { useFocusOnMount } from "@/components/accessibility/useFocusOnMount";
 
 export default function Example() {
   const ref = useFocusOnMount<HTMLInputElement>();
@@ -121,11 +123,30 @@ export default function Example() {
 }
 ```
 
-### Verhalten
+**Verhalten:**
 
 - Setzt Fokus beim ersten Rendern
 - Kein Fehler, wenn kein Element vorhanden ist
 - Funktioniert nur bei fokussierbaren Elementen
+
+---
+
+### SkipToContent
+
+Accessibility-Komponente zum schnellen Überspringen von Navigationselementen.
+
+```tsx
+import { SkipToContent } from "@/components/accessibility/SkipToContent";
+
+export default function Layout() {
+  return (
+    <>
+      <SkipToContent />
+      <main id='main'>Inhalt</main>
+    </>
+  );
+}
+```
 
 ---
 
@@ -136,26 +157,37 @@ Dieses Projekt berücksichtigt grundlegende Accessibility-Prinzipien:
 - Fokus-Management
 - Skip-to-Content Links
 - Screenreader-Unterstützung
-- Semantische Struktur
+- Semantische HTML-Struktur
 
 ---
 
 ## Konventionen
 
-- Komponenten sind funktional (Function Components)
+- Komponenten sind funktionale Komponenten (Function Components)
 - Hooks beginnen mit `use`
 - TypeScript wird durchgehend verwendet
-- CSS über CSS Modules
+- CSS wird über CSS Modules organisiert
 - Keine Inline-Styles (außer begründet)
 
 ---
 
 ## Ziel
 
-Ziel dieses Repositories ist der Aufbau einer stabilen, wiederverwendbaren Komponentenbasis für zukünftige Projekte.
+Dieses Repository dient als:
+
+- Grundlage für wiederverwendbare Komponenten in mehreren Projekten
+- Referenz für saubere und skalierbare React-Architektur
+- Basis für eine mögliche zukünftige Component Library
+
+---
+
+## Status
+
+Dieses Projekt befindet sich in aktiver Entwicklung.
+Neue Komponenten und Hooks werden kontinuierlich ergänzt und verbessert.
 
 ---
 
 ## Lizenz
 
-Private Nutzung / noch keine öffentliche Lizenz definiert
+Derzeit keine öffentliche Lizenz definiert (private Nutzung).
