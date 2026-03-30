@@ -56,6 +56,7 @@ src/
       tokens.css
     normalize.css
     styles.css
+  types/
 ```
 
 ### Beschreibung
