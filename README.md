@@ -51,12 +51,18 @@ src/
         link.module.css
         Link.tsx
   hooks/
+    useCount.ts
+    useDebounceValue.ts
+    useDocumentTitle.ts
+    useToggle.ts
   styles/
-    gloabls/
+    globals/
       tokens.css
     normalize.css
     styles.css
   types/
+  utils/
+    slugify.ts
 ```
 
 ### Beschreibung
