@@ -6,7 +6,7 @@ Sammlung wiederverwendbarer React-Komponenten und Hooks mit Fokus auf Struktur, 
 
 Dieses Repository enthält:
 
-- UI-Komponenten (z.B. Container, Stack, BackgroundGradient, Link)
+- UI- & Layout - Komponenten
 - Utility-Komponenten für Accessibility
 - Custom Hooks zur Wiederverwendung von Logik
 
@@ -61,7 +61,7 @@ src/
 ### Beschreibung
 
 - **components/**
-  Wiederverwendbare UI-Komponenten
+  Wiederverwendbare UI- & Layout-Komponenten
 
 - **accessibility/**
   Komponenten und Hooks zur Verbesserung der Barrierefreiheit
