@@ -1,0 +1,111 @@
+/* @link https://utopia.fyi/type/calculator?c=320,16,1,1920,16,1.2,6,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  /* Step 0: 20px → 16px */
+  --step-0: clamp(1rem, 1rem + -0.25vw, 1.25rem);
+  /* Step 1: 21.34px → 19.2px */
+  --step-1: clamp(1rem, 1.3605rem + -0.1337vw, 1.3338rem);
+  /* Step 2: 22.7698px → 23.04px */
+  --step-2: clamp(1rem, 1.75rem + 0.0169vw, 1.44rem);
+  /* Step 3: 24.2954px → 27.648px */
+  --step-3: clamp(1.5rem, 1.5rem + 0.2095vw, 1.728rem);
+  /* Step 4: 20px → 33.1776px */
+  --step-4: clamp(1.75rem, 1.3853rem + 0.5736vw, 2.0736rem);
+  /* Step 5: 20px → 39.8131px */
+  --step-5: clamp(1.825rem, 1.3023rem + 0.9883vw, 2.4883rem);
+  /* Step 6: 24px → 47.7757px */
+  --step-6: clamp(1.9rem, 1.2028rem + 1.486vw, 2.986rem);
+}
+
+body {
+  color: rgb(var(--text-color));
+  font-size: 1.25rem;
+  font-family: var(--font-inter);
+  font-weight: 300;
+  letter-spacing: 0.25px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+/* Klassennamen wie .h2 ermöglichen es leicht, die semantisch
+    richtige Überschrift zu wählen (also z.B. keine Stufe auszulassen),
+    aber bei Bedarf eine h3 wie eine h2 aussehen zu lassen. */
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+h6,
+.h6 {
+  margin-block: 0;
+  padding-block: 1rem;
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+  font-family: var(--font-oswald);
+  color: rgb(var(--heading-color));
+}
+h3,
+.h3,
+h4,
+.h4 {
+  font-family: var(--font-oswald);
+}
+
+h1,
+.h1 {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+h2,
+.h2 {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+h3,
+.h3 {
+  font-size: 36px;
+  font-weight: normal;
+}
+h4,
+.h4 {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.text {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+html {
+  /* https://chriscoyier.net/2023/11/27/the-hanging-punctuation-property-in-css/
+      https://css-tricks.com/almanac/properties/h/hanging-punctuation/	*/
+  hanging-punctuation: first allow-end last;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+a {
+  color: rgb(var(--link-color));
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  position: relative;
+
+  &:hover {
+    color: rgb(var(--active-link-color));
+  }
+}

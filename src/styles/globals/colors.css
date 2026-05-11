@@ -1,0 +1,72 @@
+:root {
+  color-scheme: light dark;
+
+  &[data-color-theme="dark"] {
+    color-scheme: dark;
+  }
+
+  &[data-color-theme="light"] {
+    color-scheme: light;
+  }
+
+  /* --black: #000000;
+  --white: #ffffff;
+  --ruby: #711521;
+  --ruby-900: #3f0f15;
+  --peach: #f88d7f;
+  --peach-300: #f2b39f;
+  --peach-700: #462d25;
+  --peach-900: #35211b;
+
+  --beige: #f0d6bf;
+  --clay-500: #cc9d8f; */
+
+  --black: 0, 0, 0;
+  --white: 255, 255, 255;
+
+  --ruby: 113, 21, 33;
+  --ruby-900: 63, 15, 21;
+
+  --peach-white: 240, 228, 217;
+  --peach: 248, 141, 127;
+  --peach-300: 242, 179, 159;
+  --peach-700: 70, 45, 37;
+  --peach-900: 53, 33, 27;
+
+  --peach-brown: 204, 157, 143;
+
+  --beige: 240, 214, 191;
+  --clay-500: 204, 157, 143;
+
+  /*  Variablennamen zum Beschreiben der Funktion */
+  --background-color: rgba(var(--black), 1);
+  --text-color: var(--beige);
+  --heading-color: var(--beige);
+  --hero-headline-highlighted-color: var(--peach-300);
+  --heading-secondary-color: var(--peach);
+  --link-color: var(--peach-300);
+  --active-link-color: var(--beige);
+  --nav-link-color: var(--beige);
+  --nav-active-link-color: var(--clay-500);
+  --nav-focus-link-color: var(--clay-500);
+
+  --header-background: linear-gradient(
+    135deg,
+    rgba(var(--black), 1) 0%,
+    rgba(var(--ruby), 1) 100%
+  );
+  --footer-background: linear-gradient(
+    180deg,
+    rgba(39, 39, 39, 1) 0%,
+    rgba(31, 31, 31, 1) 44%,
+    rgba(20, 20, 20, 1) 50%,
+    rgba(8, 8, 8, 1) 100%
+  );
+  --footer-navigation-link-color: var(--beige);
+  --footer-navigation-active-link-color: var(--beige);
+  --box-background-gradient: linear-gradient(
+    90deg,
+    rgba(2, 2, 2, 0.5) 0%,
+    rgba(23, 23, 23, 0.5) 100%
+  );
+}

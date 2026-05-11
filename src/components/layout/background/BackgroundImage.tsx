@@ -1,4 +1,35 @@
-import styles from "./backgroundImage.module.css";
+/**
+ * BackgroundImageWrapper
+ *
+ * Zweck:
+ * Wrapper-Komponente zur Darstellung eines Hintergrundbildes mit optionalem
+ * Blur-Overlay hinter beliebigen Inhalten.
+ *
+ * Anwendung:
+ * Übergibt ein `image`-Objekt mit den nötigen Bilddaten. Die Komponente rendert
+ * automatisch ein Next.js <Image /> im Hintergrund und legt die Kinder-Elemente darüber.
+ * Optional kann über `blur` ein Weichzeichner-Effekt aktiviert werden.
+ *
+ * Besonderheiten:
+ * - Unterstützt feste Bildgrößen (width/height) oder `fill`-Layout
+ * - Setzt automatisch `object-fit` je nach Bildtyp
+ * - Overlay-Effekt wird nur gerendert, wenn `blur` gesetzt ist
+ *
+ * Beispiel:
+ * <BackgroundImageWrapper
+ *   image={{
+ *     src: "/hero.jpg",
+ *     alt: "Hero Hintergrund",
+ *   }}
+ *   blur={4}
+ * >
+ *   <section>
+ *     <h1>Hero Content</h1>
+ *   </section>
+ * </BackgroundImageWrapper>
+ */
+
+import styles from "./backgroundImageWrapper.module.css";
 import Image from "next/image";
 import React from "react";
 

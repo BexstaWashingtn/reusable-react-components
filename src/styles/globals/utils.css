@@ -1,0 +1,49 @@
+/* Text Colors */
+
+/* Headline Highlights */
+.highlight-beige {
+  color: rgb(var(--beige));
+}
+
+.highlight-peach {
+  color: rgb(var(--peach));
+}
+.highlight-peach-300 {
+  color: rgb(var(--peach-300));
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Standard Align Items */
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+
+/* Breakpoint-spezifisch */
+
+/* breakpoint max 1024 lg  */
+
+@media (max-width: 1024px) {
+  .align-center-lg {
+    align-items: center;
+  }
+}
+
+/* breakpoint max tablet md  */
+
+@media (max-width: 768px) {
+  .align-stretch-md {
+    align-items: stretch;
+  }
+  .align-center-md {
+    align-items: center;
+  }
+}

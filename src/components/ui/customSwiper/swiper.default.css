@@ -1,0 +1,31 @@
+div[class*="customSwiper_swiperContainer"] {
+  .swiperCustomCSS {
+    padding-bottom: 8rem;
+    width: 100%;
+
+    .swiperCustomPagination {
+      text-align: center;
+      width: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      border-radius: 50px;
+      border: 2px solid rgb(var(--peach));
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      position: absolute;
+
+      .swiper-pagination-bullet {
+        background: rgba(var(--beige), 1);
+        height: 10px;
+        width: 10px;
+        border-radius: var(--radius-md);
+      }
+    }
+
+    .swiperCustomPagination.swiper-pagination-lock {
+      display: none;
+    }
+  }
+}
