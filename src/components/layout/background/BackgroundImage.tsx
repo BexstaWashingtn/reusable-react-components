@@ -29,7 +29,7 @@
  * </BackgroundImageWrapper>
  */
 
-import styles from "./backgroundImageWrapper.module.css";
+import styles from "./backgroundImage.module.css";
 import Image from "next/image";
 import React from "react";
 
@@ -48,7 +48,7 @@ type Props = {
   blur?: number;
 };
 
-export const BackgroundImageWrapper = ({ children, image, blur }: Props) => {
+export const BackgroundImage = ({ children, image, blur }: Props) => {
   if (!image) return <>{children}</>;
 
   let content = <>{children}</>;

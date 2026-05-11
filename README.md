@@ -14,6 +14,7 @@ Dieses Projekt enthält:
 - Accessibility-Komponenten und -Utilities
 - Wiederverwendbare Custom Hooks
 - Utility-Funktionen
+- TS Types
 
 Ziel ist eine klare Trennung von Darstellung, Logik und Struktur, um Komponenten effizient über mehrere Projekte hinweg nutzen zu können.
 
@@ -47,8 +48,10 @@ src/
     accessibility/
     layout/
     ui/
-  hooks/
-  utils/
+  lib/
+    hooks/
+    utils/
+      data/
   styles/
   types/
 ```
